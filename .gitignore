@@ -1,16 +1,52 @@
-# Compiled class file
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# ==== OS / 편의 ====
+.DS_Store
+Thumbs.db
+
+# ==== Java ====
 *.class
-
-# Log file
 *.log
+hs_err_pid*
+replay_pid*
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# 패키징 산출물(빌드 아티팩트)
 *.jar
 *.war
 *.nar
@@ -18,7 +54,76 @@
 *.zip
 *.tar.gz
 *.rar
+# Gradle/Maven Wrapper JAR은 추적 유지
+!gradle-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# ==== Maven ====
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Wrapper 속성도 추적 유지
+!.mvn/wrapper/maven-wrapper.properties
+
+# ==== Gradle ====
+.gradle/
+**/build/
+!**/src/**/build/
+gradle-app.setting
+# (Kotlin 2.0+ 캐시) 필요 시
+.kotlin/
+
+# ==== IDE ====
+# IntelliJ IDEA (JetBrains 공식 글로벌 템플릿 기반)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/contentModel.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+# 전부 무시하고 싶다면 아래를 해제
+# .idea/
+# *.iml
+# *.ipr
+# *.iws
+
+# Eclipse / Spring Tool Suite
+.project
+.classpath
+.settings/
+.springBeans
+.apt_generated/
+.apt_generated_tests/
+
+# VS Code (공식 템플릿 권장 예외 유지)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# ==== 공통 빌드 산출물 ====
+/bin/
+/out/
+/dist/
+
+# ==== (선택) 프론트엔드 사용 시 ====
+# node_modules/
+# dist/
+# build/
+
+# ==== (선택) 로컬 전용 설정/비밀 ====
+# .env
+# *.env
+# application-local.yml
+# application-*.properties
+# application-*.yml
