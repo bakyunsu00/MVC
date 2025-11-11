@@ -15,15 +15,17 @@ import java.util.Map;
 @WebServlet(name = "FrontControllerV2", urlPatterns ="/front-controller-v2/members/*")
 public class FrontControllerV2 extends HttpServlet {
 
+    private Map<String, ControllerV2> map = new HashMap<>();
 
+    public FrontControllerV2() {
+        map.put("/front-controller-v2/members/new-form",new MemberFormControllerV2());
+        map.put("/front-controller-v2/members/save",new MemberSaveControllerV2());
+        map.put("/front-controller-v2/members/",new MemberListControllerV2());
+    }
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Map<String, ControllerV2> map = new HashMap<>();
-        map.put("/front-controller-v2/members/new-form",new MemberFormControllerV2());
-        map.put("/front-controller-v2/members/save",new MemberSaveControllerV2());
-        map.put("/front-controller-v2/members/",new MemberListControllerV2());
 
         ControllerV2 controllerV2 = map.get(request.getRequestURI());
 
